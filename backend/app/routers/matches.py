@@ -10,6 +10,11 @@ router = APIRouter()
 with open("ml/model.pkl", "rb") as f:
     MODEL, LE = pickle.load(f)
 
+@router.get("/")
+def get_all_matches(db: Session = Depends(get_db)):
+    matches = db.query(models.Match).order_by(models.Match.date.desc()).limit(50).all()
+    return matches
+
 @router.get("/predict")
 def predict_match(home: str, away: str, db: Session = Depends(get_db)):
     def get_team_features(team_name, is_home, db):

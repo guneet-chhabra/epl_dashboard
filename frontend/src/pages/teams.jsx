@@ -3,8 +3,16 @@ import { getTeams, getTeamForm, getTeamXG } from "../api"
 import FormStrip from "../components/formstrip"
 import XGTimeline from "../components/xgtimeline"
 
+
 export default function Teams() {
-  const [teams, setTeams]   = useState([])
+  const TEAMS = [
+  "Arsenal FC", "Aston Villa FC", "Bournemouth FC", "Brentford FC",
+  "Brighton & Hove Albion FC", "Burnley FC", "Chelsea FC", "Crystal Palace FC",
+  "Everton FC", "Fulham FC", "Liverpool FC", "Luton Town FC",
+  "Manchester City FC", "Manchester United FC", "Newcastle United FC",
+  "Nottingham Forest FC", "Sheffield United FC", "Tottenham Hotspur FC",
+  "West Ham United FC", "Wolverhampton Wanderers FC"
+]
   const [forms, setForms]   = useState({})
   const [selected, setSelected] = useState(null)
   const [xgData, setXgData] = useState([])

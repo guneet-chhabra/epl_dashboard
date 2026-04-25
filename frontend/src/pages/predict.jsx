@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { predictMatch } from "../api";
 
-const TEAMS = ["Arsenal", "Manchester City", "Liverpool",
-               "Chelsea", "Tottenham", "Manchester United",
-               "Aston Villa", "Newcastle", "Brighton", "West Ham"];
-
+const TEAMS = [
+  "Arsenal FC", "Aston Villa FC", "Bournemouth FC", "Brentford FC",
+  "Brighton & Hove Albion FC", "Burnley FC", "Chelsea FC", "Crystal Palace FC",
+  "Everton FC", "Fulham FC", "Liverpool FC", "Luton Town FC",
+  "Manchester City FC", "Manchester United FC", "Newcastle United FC",
+  "Nottingham Forest FC", "Sheffield United FC", "Tottenham Hotspur FC",
+  "West Ham United FC", "Wolverhampton Wanderers FC"
+];
 export default function Predict() {
   const [home, setHome]     = useState(TEAMS[0]);
   const [away, setAway]     = useState(TEAMS[1]);
