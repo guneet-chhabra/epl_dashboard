@@ -11,7 +11,11 @@ app = FastAPI(title="EPL Dashboard API")
 # CORS — allows your React frontend (on a different port) to talk to this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://your-vercel-url.vercel.app"],
+    allow_origins=[
+    "http://localhost:5173",
+    "https://epl-dashboard-tau.vercel.app",
+    "https://your-deployment-link.vercel.app"
+],
     allow_methods=["*"],
     allow_headers=["*"],
 )
