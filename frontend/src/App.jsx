@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom"
-import Teams from "./pages/Teams"
-import Predict from "./pages/Predict"
-import Players from "./pages/Players"
+import Teams from "./pages/teams"
+import Predict from "./pages/predict"
+import Players from "./pages/players"
 
 export default function App() {
   return (

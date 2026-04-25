@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { getTeams, getTeamForm, getTeamXG } from "../api"
-import FormStrip from "../components/FormStrip"
-import XGTimeline from "../components/XGTimeline"
+import FormStrip from "../components/formstrip"
+import XGTimeline from "../components/xgtimeline"
 
 export default function Teams() {
   const [teams, setTeams]   = useState([])

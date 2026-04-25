@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { getPlayers } from "../api"
-import RadarChart from "../components/RadarChart"
+import RadarChart from "../components/radarchart"
 
 export default function Players() {
   const [players, setPlayers]   = useState([])
